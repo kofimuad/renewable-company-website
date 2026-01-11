@@ -13,25 +13,24 @@ html {
 body {
   background-color: #0a0a0a;
   color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Remove default button styles */
 button {
   font-family: inherit;
   cursor: pointer;
+  border: none;
 }
 
-/* Remove default input styles */
 input, textarea, select {
   font-family: inherit;
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -40,7 +39,7 @@ input, textarea, select {
 
 ::-webkit-scrollbar-thumb {
   background: #00d4ff;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -68,10 +67,42 @@ input, textarea, select {
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
 .animate-slide-in {
-  animation: slideIn 0.6s ease-out;
+  animation: slideIn 0.6s ease-out forwards;
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.8s ease-out;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Subtle text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Links styling */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00d4ff;
+  transition: color 0.3s ease;
 }
