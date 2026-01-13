@@ -21,7 +21,7 @@ export default function About() {
 
         <div className="flex flex-col md:flex-row items-center gap-16 bg-background-dark overflow-hidden" style={{ border: '1px solid rgba(255, 255, 255, 0.1)' }}>
           <div className="md:w-1/3 h-[500px] w-full bg-cover bg-center" style={{
-            backgroundImage: 'url(./src/assets/frederick_agyemang.png)',
+            backgroundImage: 'url(/frederick_agyemang.png)',
             filter: 'grayscale(1) contrast(1.25)'
           }}></div>
           <div className="md:w-2/3 p-12">
